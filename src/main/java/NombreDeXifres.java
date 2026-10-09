@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 // Activitat 18 — Nombre de xifres
 public class NombreDeXifres {
     public static void main(String[] args) {
@@ -5,5 +8,18 @@ public class NombreDeXifres {
         //   divideix-lo successivament entre 10 (prenent la part sencera)
         //   fins obtenir un quocient 0, comptant les divisions fetes amb un comptador
         //   Mostra: "El número <numero> té <xifres> xifres."
+        Scanner teclat = new Scanner(System.in);
+        System.out.println("Introdueix un número enter positiu: ");
+        int numero = teclat.nextInt();
+
+        int numero_divisio = numero;
+
+        int comptador = 0;
+
+        do { 
+            numero_divisio = numero_divisio/10;
+            comptador++;
+        } while (numero_divisio > 0);
+        System.out.println("El número "+numero+" té "+comptador+" xifres.");
     }
 }
