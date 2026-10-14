@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 // Activitat 23 — Suma fins a més de 21
 public class SumaMesDe21 {
     public static void main(String[] args) {
@@ -7,5 +10,22 @@ public class SumaMesDe21 {
         //   si sí que hi està, suma'l a la variable suma
         //   Quan la suma superi 21, mostra:
         //   "Més de 21! La suma dels números entrats és <suma>"
+        Scanner teclat = new Scanner(System.in);
+        int suma = 0;
+
+        while (suma <= 21)
+        {
+            System.out.println("Introdueix un número entre 1 i 5: ");
+            int numero = teclat.nextInt();
+            if(numero>5)
+            {
+                System.out.println("El número no és correcte!");
+            }
+            else{
+                suma = suma + numero;
+                suma++;
+            }
+        }
+        System.out.println("Més de 21! La suma dels números entrats és: "+suma);
     }
 }
